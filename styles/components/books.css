@@ -1,0 +1,129 @@
+
+
+.books{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0.1rem;
+    /* gap: 1.5rem; */
+}
+
+.book{
+    cursor: pointer;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    position: relative;
+}
+
+.book:hover .book-data{
+    opacity: 1;
+}
+
+.book:hover{
+    transform: translateY(-1px);
+}
+
+.book-title{
+    display: inline;
+}
+
+.book-img{
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.book-data{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--text);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-rating{
+    /* display: inline-block; */
+}
+
+/* ── Hidden utility ── */
+.hidden{
+    display: none !important;
+}
+
+/* ── Book detail view ── */
+.book-detail{
+    display: none;
+    /* border: 2px solid var(--clr-header); */
+}
+
+.book-detail.open{
+    display: block;
+    animation: fadeIn 0.25s ease;
+}
+
+
+
+.detail-close{
+    color: var(--utilites);
+    font-family: inherit;
+    font-size: var(--size-sm);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline;
+}
+
+.detail-close:hover{
+    text-decoration: underline;
+}
+
+.detail-title{
+    font-size: var(--size-3xl);
+    margin-bottom: 0.25rem;
+    /* border: 2px solid var(--clr-header); */
+}
+
+.detail-author{
+    color: var(--utilites);
+    font-size: var(--size-sm);
+}
+
+.detail-meta{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: var(--size-xs);
+}
+
+.detail-tag{
+    background-color: var(--clr-header);
+    color: var(--dark);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.detail-date,
+.detail-time{
+    color: var(--utilites);
+}
+
+.detail-rating{
+    margin-bottom: 1.5rem;
+    font-size: var(--size-lg);
+    color: var(--clr-light);
+}
+
+.detail-review{
+    line-height: 1.8;
+    font-size: var(--size-sm);
+    color: var(--text);
+    max-width: 65ch;
+}

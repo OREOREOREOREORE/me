@@ -1,0 +1,24 @@
+[
+  {
+    "id": "atomic-habits",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "image": "assets/atomic.png",
+    "date": "2025-12-15",
+    "tag": "Self-improvement",
+    "readingTime": "5 min",
+    "rating": 4,
+    "review": "To write "
+  },
+  {
+    "id": "courage-to-be-disliked",
+    "title": "Courage to Be Disliked",
+    "author": "Ichiro Kishimi & Fumitake Koga",
+    "image": "assets/courage.png",
+    "date": "2026-01-20",
+    "tag": "Philosophy",
+    "readingTime": "4 mins",
+    "rating": 4,
+    "review": "To write"
+  }
+]

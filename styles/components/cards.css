@@ -1,0 +1,109 @@
+.container {
+    padding-block: 1rem;
+}
+
+.cards-container {
+    display: grid;
+    row-gap: 0.1rem;
+    width: 100%;
+}
+
+/* Card base */
+.card {
+    position: relative;
+    display: grid;
+    gap: 1.25rem;
+    padding-block: 1.25rem;
+    padding-inline: 0;
+    background-color: var(--clr-grey);
+    border-left: 4px solid var(--clr-light);
+    cursor: pointer;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    border-color: var(--clr-header);
+    transform: translateY(-3px);
+}
+
+
+
+.card-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-left: 0.5rem;
+}
+
+.card-title {
+    font-size: var(--size-xl);
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.25s ease;
+}
+
+.card:hover .card-title {
+    color: var(--clr-header);
+}
+
+.card-description {
+    font-size: var(--size-sm);
+    color: var(--utilites);
+    line-height: 1.7;
+}
+
+/* Read more indicator */
+.card-data::after {
+    /* content: '→'; */
+    font-size: var(--size-xs);
+    color: var(--utilites);
+    margin-top: 0.4rem;
+    transition: color 0.25s ease;
+}
+
+.card:hover .card-data::after {
+    color: var(--clr-header);
+}
+
+/* details about cards (think)*/
+
+.hidden-cards{
+    display: none !important;
+}
+
+.cards-detail{
+    display: none;
+}
+
+.cards-detail.open{
+    display: block;
+    animation: fadeIn 0.25s ease;
+}
+
+
+.card-detail-title{
+    font-size: var(--size-2xl);
+    margin-bottom: 0.25rem;
+}
+
+.card-detail-meta{
+    display: flex;
+    gap: 1rem;
+    font-size: var(--size-xs);
+}
+
+.card-detail-think{
+    line-height: 1.8rem;
+    font-size: var(--size-sm);
+    color: var(--text);
+    max-width: 70ch;
+}
+
+
+/* Side-by-side layout on wider screens (only when image is present) */
+/* @media (min-width: 640px) {
+    .card:has(.card-image) {
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+    }
+} */

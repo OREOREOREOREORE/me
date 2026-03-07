@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "title": "Comparsions",
+        "author": "Alan",
+        "info": "Human born with, we can\u2019t control even when you think you can.",
+        "file": "thinks/1-comparisons.html"
+    },
+    {
+        "id": "2",
+        "title": "Discussions",
+        "author": "Alan",
+        "info": "why do we need ....",
+        "file": "thinks/2-discussions.html"
+    },
+    {
+        "id": "3",
+        "title": "Habits",
+        "author": "Alan",
+        "info": "what you are doing today, shape who you are.",
+        "file": "thinks/3-habits.html"
+    }
+]

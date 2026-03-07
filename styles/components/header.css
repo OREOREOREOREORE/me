@@ -1,0 +1,73 @@
+/* header */
+.header{
+    background-color: var(--clr-header);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px 2px rgb(0, 0, 0);
+}
+
+nav > ul{
+    /* border: 1px solid red; */
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    gap: 16px;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--clr-white);
+    display: block;
+}
+
+nav a:hover{
+    color: var(--clr-dark);
+}
+
+.slogan{
+    font-weight: 900;
+    font-size: var(--size-2xl);
+    color: #191a1b;
+    flex-shrink: 0;
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    transition: color 0.2s ease;
+}
+
+.slogan::after {
+    content: attr(data-hover);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.slogan:hover {
+    color: transparent;
+}
+
+.slogan:hover::after {
+    opacity: 1;
+    color: #191a1b;
+}
+
+
+p{
+    text-align: justify;
+    margin-top: 2rem;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid var(--clr-dark);
+    }
+}
