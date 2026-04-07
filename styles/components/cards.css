@@ -22,7 +22,7 @@
 }
 
 .card:hover {
-    border-color: var(--clr-header);
+    border-color: var(--clr-utilities);
     transform: translateY(-3px);
 }
 
@@ -43,12 +43,12 @@
 }
 
 .card:hover .card-title {
-    color: var(--clr-header);
+    color: var(--clr-utilities);
 }
 
 .card-description {
     font-size: var(--size-sm);
-    color: var(--utilites);
+    color: var(--utilities);
     line-height: 1.7;
 }
 
@@ -56,13 +56,13 @@
 .card-data::after {
     /* content: '→'; */
     font-size: var(--size-xs);
-    color: var(--utilites);
+    color: var(--utilities);
     margin-top: 0.4rem;
     transition: color 0.25s ease;
 }
 
 .card:hover .card-data::after {
-    color: var(--clr-header);
+    color: var(--clr-utilities);
 }
 
 /* details about cards (think)*/

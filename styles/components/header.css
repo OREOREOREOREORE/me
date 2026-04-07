@@ -32,7 +32,7 @@ nav a:hover{
 .slogan{
     font-weight: 900;
     font-size: var(--size-2xl);
-    color: #191a1b;
+    color: var(--clr-white);
     flex-shrink: 0;
     position: relative;
     display: inline-block;

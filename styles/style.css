@@ -2,11 +2,13 @@
     --clr-dark: #292929;
     --clr-grey: #2e2c2c1b;
     --clr-light: #fecea8;
-    --clr-header: #99b898;
+    --clr-utilities: #99b898;
+    --clr-header: #3a3c3d;
+
 
     --dark: #191a1b;
     --text:#ffffff;
-    --utilites: #a8b5a2;
+    --utilities: #a8b5a2;
 
     /* size */
     --size-xxs: 0.5rem;
