@@ -94,3 +94,16 @@ function showThinkDetail(think){
       document.querySelector('.wrapper.block').classList.add('hidden-cards');
     });
 }
+
+const nav = document.querySelector('nav');
+
+function openSideBar(){
+    nav.classList.add('show');
+}
+
+function closeSideBar(){
+    nav.classList.remove('show');
+}
+
+window.openSideBar = openSideBar;
+window.closeSidebar = closeSideBar;

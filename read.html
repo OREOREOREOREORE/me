@@ -15,17 +15,27 @@
 </head>
 <body>
 	<header class="header">
-		<span class="slogan" data-hover="Hunker down, Learn, and Build.">
-			Alan.dev_
+		<span class="slogan" data-hover="Alan.dev_">
+
+			Learn, and Build.
 			<!-- make memory to you own life. -->
 		</span>
-		<nav>
+		<nav id="navBar">
 			<ul>
+				<li>
+					<button id="sideBar-toggle" onclick="closeSidebar()">
+						<img src="assets/sidebar.svg" alt="bar" height="35rem">
+					</button>
+				</li>
 				<li><a href="index.html">About</a></li>
 				<li><a href="think.html">Think</a></li>
 				<li><a href="read.html">Read</a></li>
 			</ul>
 		</nav>
+
+		<button id="sideBar-toggle" onclick="openSideBar()">
+			<img src="assets/sidebar.svg" alt="bar" height="35rem">
+		</button>
 	</header>
 
 	<main class="wrapper main">

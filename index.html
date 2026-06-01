@@ -10,21 +10,30 @@
 	<link rel="stylesheet" href="./styles/utilites.css">
 	<link rel="stylesheet" href="./styles/components/header.css">
 	<link rel="stylesheet" href="./styles/components/footer.css">
-	<script type="module" src="./src/main.js"></script>
+	<script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
 	<header class="header">
-		<span class="slogan" data-hover="Hunker down, Learn, and Build.">
+		<span class="slogan" data-hover="Hunker down.">
 			Alan.dev_
 			<!-- make memory to you own life. -->
 		</span>
 		<nav>
 			<ul>
+				<li>
+					<button id="sideBar-toggle" onclick="closeSidebar()" >
+						<img src="assets/sidebar.svg" alt="bar" height="35rem">
+					</button>
+				</li>
 				<li><a href="index.html">About</a></li>
 				<li><a href="think.html">Think</a></li>
 				<li><a href="read.html">Read</a></li>
 			</ul>
 		</nav>
+
+		<button id="sideBar-toggle" onclick="openSideBar()">
+			<img src="assets/sidebar.svg" alt="bar" height="35rem">
+		</button>
 	</header>
 
 	<main class="wrapper main">
