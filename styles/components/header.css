@@ -1,7 +1,11 @@
 /* header */
-.header{
+header{
     background-color: var(--clr-header);
-    width: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     height: 8vh;
     display: flex;
     align-items: center;
@@ -53,11 +57,12 @@ nav a:hover{
 
 .slogan:hover {
     color: transparent;
+    font-size: var(--size-xl);
 }
 
 .slogan:hover::after {
     opacity: 1;
-    color: #191a1b;
+    color: #edf5fd;
 }
 
 
@@ -70,4 +75,43 @@ p{
     to{
         border-left: 3px solid var(--clr-dark);
     }
+}
+
+
+#sideBar-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    #sideBar-toggle{
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 2px solid var(--clr-dark);
+        background-color: var(--clr-header);
+        transition: right 0.3s ease;
+    }
+
+    nav.show{
+        right: 0;
+    }
+
+    nav a {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+
 }
