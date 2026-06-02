@@ -70,6 +70,13 @@ blockquote{
     margin: 1rem 0;
 }
 
+
+hr {
+    width: 50%;
+    margin: 2rem auto;
+    border: dotted;
+}
+
 @keyframes fadeIn{
     from{ opacity: 0; transform: translateY(8px); }
     to  { opacity: 1; transform: translateY(0); }

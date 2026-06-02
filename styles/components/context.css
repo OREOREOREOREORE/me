@@ -1,0 +1,20 @@
+.wrapper ul {
+    margin-bottom: 2rem;
+}
+
+.wrapper li {
+    margin-bottom: 0.5rem;
+}
+
+.wrapper li:last-child {
+    margin-bottom: 0;
+}
+
+.tools ul{
+    list-style-type: disc;
+}
+
+.tools a {
+    color: var(--clr-light);
+    text-decoration: underline dotted;
+}
