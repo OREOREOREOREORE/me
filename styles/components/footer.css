@@ -2,6 +2,7 @@ footer{
     font-size: var(--font-size-small);
     font-weight: 400;
     text-align: center;
-    margin: 16px;
-    margin-top: 10em;
+    margin: auto 16px 16px;
+    padding-top: 4rem;
+
 }

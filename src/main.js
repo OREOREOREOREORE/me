@@ -7,7 +7,7 @@ if (booksGrid && detailView) {
 }
 
 async function initBooks() {
-  const res = await fetch('./site/books.json');
+  const res = await fetch('./books.json');
   const books = await res.json();
 
   // Render grid
@@ -59,7 +59,7 @@ const thinkDetail = document.querySelector('.cards-detail');
 if (thinkCards && thinkDetail) {initThink();}
 
 async function initThink() {
-  const res = await fetch('./site/think.json');
+  const res = await fetch('./think.json');
   const thinks = await res.json()
 
   thinkCards.innerHTML = '';
@@ -80,7 +80,7 @@ async function initThink() {
 {/* <a href="#" target="_blank" rel="noopener noreferrer" class="card-button">Read more</a> */}
 
 function showThinkDetail(think){
-  const contentUrl = `./site/${think.file}`;
+  const contentUrl = `./${think.file}`;
   fetch(contentUrl)
     .then(res => res.ok ? res.text() : '')
     .then(html => {
