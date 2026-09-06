@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alan.dev_</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/style.css">
+	<link rel="stylesheet" href="../styles/utilites.css">
+	<link rel="stylesheet" href="../styles/components/header.css">
+	<link rel="stylesheet" href="../styles/components/footer.css">
+	<link rel="stylesheet" href="../styles/components/books.css">
+	<script type="module" src="../src/main.js"></script>
+</head>
+<body>
+	<header class="header">
+		<span class="slogan" data-hover="Alan.dev_">
+			Learn, and Build.
+			<!-- make memory to you own life. -->
+		</span>
+		<nav id="navBar">
+			<ul>
+				<li>
+					<button id="sideBar-toggle" onclick="closeSidebar()">
+						<img src="../assets/sidebar.svg" alt="bar" height="35rem">
+					</button>
+				</li>
+				<li><a href="../index.html">About</a></li>
+				<li><a href="think.html">Think</a></li>
+				<li><a href="read.html">Read</a></li>
+			</ul>
+		</nav>
+
+		<button id="sideBar-toggle" onclick="openSideBar()">
+			<img src="../assets/sidebar.svg" alt="bar" height="35rem">
+		</button>
+	</header>
+
+	<main class="wrapper main">
+	</main>
+
+	<div class="wrapper">
+		<div class="books-container">
+			<div class="books">
+				<!-- books rendered dynamically from site/books.json -->
+			</div>
+		</div>
+
+		<div class="book-detail">
+			<!-- detail view rendered by JS on click -->
+		</div>
+	</div>
+
+	<footer>
+		 &copy; 2026  Alan's website.
+	</footer>
+
+
+</body>
+</html>
