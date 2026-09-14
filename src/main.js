@@ -3,11 +3,11 @@ const booksGrid = document.querySelector('.books');
 const detailView = document.querySelector('.book-detail');
 
 if (booksGrid && detailView) {
-  initBooks();
+  await initBooks();
 }
 
 async function initBooks() {
-  const res = await fetch('./site/books.json');
+  const res = await fetch('./books.json');
   const books = await res.json();
 
   // Render grid
@@ -30,7 +30,7 @@ async function initBooks() {
 }
 
 function showDetail(book) {
-  const stars = '★'.repeat(book.rating) + '☆'.repeat(5 - book.rating);
+  const _stars = '★'.repeat(book.rating) + '☆'.repeat(5 - book.rating);
   detailView.innerHTML = `
     <p class="detail-title">${book.title} <span class="detail-author">by ${book.author}</span></p>
     <div class="detail-meta">
@@ -56,10 +56,10 @@ function hideDetail() {
 const thinkCards = document.querySelector('.cards');
 const thinkDetail = document.querySelector('.cards-detail');
 
-if (thinkCards && thinkDetail) {initThink();}
+if (thinkCards && thinkDetail) {await initThink();}
 
 async function initThink() {
-  const res = await fetch('./site/think.json');
+  const res = await fetch('./think.json');
   const thinks = await res.json()
 
   thinkCards.innerHTML = '';
@@ -80,9 +80,10 @@ async function initThink() {
 {/* <a href="#" target="_blank" rel="noopener noreferrer" class="card-button">Read more</a> */}
 
 function showThinkDetail(think){
-  const contentUrl = `./site/${think.file}`;
-  fetch(contentUrl)
+  const contentUrl = `./${think.file}`;
+   fetch(contentUrl)
     .then(res => res.ok ? res.text() : '')
+
     .then(html => {
       thinkDetail.innerHTML = `
         <p class="card-detail-title">${think.title}</p>
@@ -92,7 +93,11 @@ function showThinkDetail(think){
       thinkDetail.classList.add('open');
       document.querySelector('.cards-container').classList.add('hidden-cards');
       document.querySelector('.wrapper.block').classList.add('hidden-cards');
+    })
+    .catch(err => {
+      console.error(err);
     });
+
 }
 
 const nav = document.querySelector('nav');
@@ -106,4 +111,4 @@ function closeSideBar(){
 }
 
 window.openSideBar = openSideBar;
-window.closeSidebar = closeSideBar;
+window.closeSideBar = closeSideBar;
